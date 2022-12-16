@@ -1,0 +1,50 @@
+@media (max-width: 750px) {
+  .main-header {
+    // padding: 3rem 0 5rem 0;
+    // padding: 50rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      margin: 0;
+    }
+    form {
+      width: 100%;
+      // display: flex;
+      input {
+        width: 80%;
+        margin: 0 auto;
+      }
+      button {
+        background-color: red;
+        margin-left: -12rem;
+        margin-right: 10%;
+        display: none;
+      }
+    }
+  }
+  .card {
+    &__img-container {
+      img {
+        height: 37rem;
+      }
+    }
+  }
+  .main-wraper {
+    padding: 0;
+  }
+  .main-content {
+    grid-template-columns: 80%;
+    // grid-auto-rows: 38rem;
+  }
+
+  .main-footer {
+    &__item::before {
+      display: none;
+    }
+    &__heading-primary::before,
+    &__heading-primary::after {
+      display: none;
+    }
+  }
+}

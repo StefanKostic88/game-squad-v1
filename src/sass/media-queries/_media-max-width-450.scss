@@ -1,0 +1,23 @@
+@media (max-width: 450px) {
+  .main-content {
+    grid-template-columns: 92%;
+    // grid-auto-rows: 38rem;
+  }
+  .main-footer__heading-secundary {
+    text-align: center;
+  }
+  .pagination {
+    // background-color: red;
+    flex-direction: column;
+
+    a {
+      width: 60%;
+    }
+    a:first-child {
+      margin-top: 2rem;
+    }
+    a:last-child {
+      margin-bottom: 3rem;
+    }
+  }
+}

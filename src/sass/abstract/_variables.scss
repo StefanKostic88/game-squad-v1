@@ -1,0 +1,41 @@
+:root {
+  /// Header/footer vars
+  --header-footer-padding: 3rem 10rem;
+  --header-footer-linear-gradient: linear-gradient(
+    45deg,
+    rgba(6, 68, 184, 0) 10%,
+    rgba(6, 68, 184, 0.2) 20%,
+    rgba(6, 68, 184, 0.4) 40%,
+    rgba(6, 68, 184, 0.8) 50%,
+    rgba(6, 68, 184, 0.4) 60%,
+    rgba(6, 68, 184, 0.2) 80%,
+    rgba(6, 68, 184, 0) 90%
+  );
+  --footer-linear-gradient-before: linear-gradient(
+    45deg,
+    rgba(6, 68, 184, 0.5) 0%,
+    rgba(6, 68, 184, 0.5) 50%,
+    rgba(6, 68, 184, 0.4) 60%,
+    rgba(6, 68, 184, 0.2) 80%,
+    rgba(6, 68, 184, 0) 90%
+  );
+
+  ////
+
+  --header-font-size-modal-small: 1.5rem;
+  --padding-modal-small: 0.6em 1.25em;
+  --margin-bottom-modal-small: 0.4rem;
+  --margin-bottom-content-modal-small: 0.6rem;
+
+  --font-size-modal-small: 1.8rem;
+
+  --tags-platforms-padding: 0.1em 0.3em;
+
+  --card-contnet-margin-bottom: 1.5rem;
+
+  --header-icon-ratio: 4rem;
+
+  //MEDIA
+  // --1600-break-padding: 0rem;
+  // --first-media-break: 160rem;
+}

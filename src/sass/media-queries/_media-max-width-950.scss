@@ -1,0 +1,37 @@
+@media (max-width: 950px) {
+  .main-header {
+    margin-bottom: 1rem;
+  }
+  .main-wraper {
+    grid-template-columns: 100%;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+  .main-sidebar {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-sidebar__nav {
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+  }
+  .main-content {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    grid-auto-rows: 32rem;
+    padding-right: 0;
+    padding: 1rem 0;
+    gap: 1.5rem;
+  }
+  .pagination {
+    background-color: black;
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+}

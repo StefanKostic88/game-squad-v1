@@ -1,0 +1,143 @@
+/// sredi hover focus i ostale efecte i prodji stilizovanje jos jednom
+///
+
+.main-footer {
+  // background-color: black;
+  // color: #eee;
+  color: inherit;
+  display: flex;
+  align-items: baseline;
+  // justify-content: space-between;
+  // gap: 10rem;
+  padding: var(--header-footer-padding);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    background-image: var(--header-footer-linear-gradient);
+  }
+  &__heading-primary {
+    font-size: 2.4rem;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 1.5rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -5%;
+      width: 50%;
+      height: 5%;
+      background-image: var(--footer-linear-gradient-before);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+      width: 100%;
+      height: 5%;
+      background-image: var(--footer-linear-gradient-before);
+    }
+  }
+
+  &__nav {
+    // background-color: black;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    padding: 1.25rem 0;
+    // &:nth-child(2) {
+    // }
+    // &:nth-child(3) {
+    //   margin-left: 5rem;
+    // }
+  }
+  &__heading-secundary {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  &__item-list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30rem;
+    &:nth-child(3) {
+      margin-left: 5rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10%;
+      width: 100%;
+      height: 5%;
+      background-image: var(--footer-linear-gradient-before);
+    }
+    span {
+      display: inline-block;
+      padding-right: 1rem;
+      font-size: 1.6rem;
+      // position: relative;
+
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 60%;
+      //   width: 50%;
+      //   height: 5%;
+      //   background-image: var(--footer-linear-gradient-before);
+      // }
+    }
+    a:link,
+    a:visited {
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: inherit;
+    }
+    &:hover,
+    &:active {
+      transform: translateY(-5%);
+    }
+  }
+}
+
+// < class="main-footer__contact-subwraper">
+// <div class="main-footer__contact-wraper">
+// &__contact-wraper {
+//   display: flex;
+//   flex-direction: column;
+// }
+// &__contact-subwraper {
+//   display: flex;
+//   background-color: white;
+// }
+
+// @media only screen and (max-width: 1600px) {
+//   & {
+//     padding: 3rem 0 3rem 2rem;
+//   }
+// }
+// @media only screen and (max-width: 1190px) {
+//   & {
+//     justify-content: center;
+//   }
+//   .main-footer__nav:nth-child(2),
+//   .main-footer__nav:nth-child(2) {
+//     margin-left: 0;
+//   }
+// }
+
+.game-info__official-container__official-webpage.dark-mode-icon {
+  fill: black;
+}

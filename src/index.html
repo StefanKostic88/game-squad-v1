@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="./img/logo-img.png" />
+    <script type="module" src="./controller.js"></script>
+    <title>Game Squad</title>
+  </head>
+  <body>
+    <header class="main-header" id="top">
+      <h1>Game Squad</h1>
+      <form action="" method="get">
+        <input type="text" placeholder="Search Game..." />
+        <button>
+          <svg class="game-info__official-container__official-webpage">
+            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+          </svg>
+        </button>
+      </form>
+
+      <div class="settings">
+        <span class="settings__open">
+          <svg class="settings__icon">
+            <use xlink:href="img/sprite.svg#icon-cog"></use>
+          </svg>
+        </span>
+
+        <ul class="settings__list settings__list-hiden">
+          <li class="settings__list-item" id="open-bookmarks">
+            Bookmarks
+            <div class="bookmark bookmark-close">
+              <ul class="bookmark__list"></ul>
+              <div class="bookmark__pagination"></div>
+            </div>
+          </li>
+          <li class="settings__list-item dark-mode-btn">Dark Mode</li>
+        </ul>
+      </div>
+    </header>
+    <div class="main-wraper">
+      <sidebar class="main-sidebar">
+        <ul class="main-sidebar__nav">
+          <li class="main-sidebar__list-item" data-select="all">
+            <a class="main-sidebar__link" href="#all-games"
+              ><h2 class="main-sidebar__sub-heading">
+                <span class="main-sidebar__sub-heading__icon">
+                  <svg class="game-info__official-container__official-webpage">
+                    <use xlink:href="img/sprite.svg#icon-game-controller"></use>
+                  </svg>
+                </span>
+                <span class="main-sidebar__sub-heading__content">
+                  All Games</span
+                >
+              </h2></a
+            >
+          </li>
+          <li class="main-sidebar__list-item genre">
+            <a class="main-sidebar__link" href="#"
+              ><h2 class="main-sidebar__sub-heading">
+                <span class="main-sidebar__sub-heading__icon">
+                  <svg class="game-info__official-container__official-webpage">
+                    <use xlink:href="img/sprite.svg#icon-hair-cross"></use>
+                  </svg>
+                </span>
+                <span class="main-sidebar__sub-heading__content"> Genre </span>
+              </h2></a
+            >
+          </li>
+          <li class="main-sidebar__list-item" data-select="publishers">
+            <a class="main-sidebar__link" href="#"
+              ><h2 class="main-sidebar__sub-heading">
+                <span class="main-sidebar__sub-heading__icon">
+                  <svg class="game-info__official-container__official-webpage">
+                    <use xlink:href="img/sprite.svg#icon-spinner6"></use>
+                  </svg>
+                </span>
+                <span class="main-sidebar__sub-heading__content">
+                  Publishers
+                </span>
+              </h2></a
+            >
+          </li>
+          <li class="main-sidebar__list-item" data-select="bookmarks">
+            <a class="main-sidebar__link" href="#"
+              ><h2 class="main-sidebar__sub-heading">
+                <span class="main-sidebar__sub-heading__icon">
+                  <svg class="game-info__official-container__official-webpage">
+                    <use xlink:href="img/sprite.svg#icon-bookmarks"></use>
+                  </svg>
+                </span>
+                <span class="main-sidebar__sub-heading__content">
+                  Bookmarks
+                </span>
+              </h2></a
+            >
+          </li>
+          <li class="main-sidebar__list-item dark-mode-btn">
+            <span class="main-sidebar__sub-heading__icon">
+              <svg
+                class="settings__icon"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+              >
+                <title>adjust</title>
+                <path
+                  d="M19 9.199c-0.182 0-0.799 0-0.98 0-0.553 0-1 0.359-1 0.801s0.447 0.799 1 0.799c0.182 0 0.799 0 0.98 0 0.552 0 1-0.357 1-0.799 0-0.441-0.449-0.801-1-0.801zM10 4.5c-3.051 0-5.5 2.449-5.5 5.5s2.449 5.5 5.5 5.5c3.050 0 5.5-2.449 5.5-5.5s-2.451-5.5-5.5-5.5zM10 14c-2.211 0-4-1.791-4-4 0-2.211 1.789-4 4-4v8zM3 10c0-0.441-0.449-0.801-1-0.801-0.185 0-0.816 0-1 0-0.553 0-1 0.359-1 0.801s0.447 0.799 1 0.799c0.184 0 0.815 0 1 0 0.551 0 1-0.358 1-0.799zM10 3c0.441 0 0.799-0.447 0.799-1 0-0.184 0-0.816 0-1 0-0.553-0.358-1-0.799-1s-0.801 0.447-0.801 1c0 0.184 0 0.816 0 1 0 0.553 0.359 1 0.801 1zM10 17c-0.442 0-0.801 0.447-0.801 1 0 0.184 0 0.816 0 1 0 0.553 0.359 1 0.801 1s0.799-0.447 0.799-1c0-0.184 0-0.816 0-1 0-0.553-0.358-1-0.799-1zM17.365 3.766c0.391-0.391 0.454-0.961 0.142-1.273s-0.883-0.248-1.272 0.143c-0.108 0.107-0.593 0.592-0.7 0.699-0.391 0.391-0.454 0.961-0.142 1.273s0.883 0.248 1.273-0.143c0.107-0.108 0.591-0.592 0.699-0.699zM3.334 15.533c-0.108 0.109-0.593 0.594-0.7 0.701-0.391 0.391-0.454 0.959-0.142 1.271s0.883 0.25 1.272-0.141c0.108-0.107 0.593-0.592 0.7-0.699 0.391-0.391 0.454-0.961 0.142-1.274s-0.883-0.247-1.272 0.142zM3.765 2.635c-0.39-0.391-0.961-0.455-1.273-0.143s-0.248 0.883 0.141 1.274c0.108 0.107 0.593 0.592 0.7 0.699 0.391 0.391 0.96 0.455 1.272 0.143s0.249-0.883-0.141-1.273c-0.107-0.108-0.591-0.593-0.699-0.7zM15.534 16.666c0.108 0.107 0.593 0.592 0.7 0.699 0.391 0.391 0.96 0.453 1.272 0.143 0.312-0.312 0.249-0.883-0.142-1.273-0.107-0.107-0.592-0.592-0.699-0.699-0.391-0.391-0.961-0.455-1.274-0.143s-0.248 0.882 0.143 1.273z"
+                ></path>
+              </svg>
+            </span>
+          </li>
+        </ul>
+      </sidebar>
+      <main class="main-content">
+        <div class="main-content__spiner main-content__spiner-hide">
+          <div class="preloader-spiner">
+            <span class="preloader-text">loading...</span>
+          </div>
+        </div>
+      </main>
+
+      <div class="pagination"></div>
+    </div>
+    <footer class="main-footer">
+      <ul class="main-footer__nav">
+        <li class="main-footer__author">
+          <h2 class="main-footer__heading-primary">
+            Designed by: Stefan Kostic
+          </h2>
+        </li>
+        <li class="main-footer__api">
+          <h2 class="main-footer__heading-secundary">
+            API used: RAWG Video Games Database API
+          </h2>
+        </li>
+      </ul>
+
+      <div class="main-footer__item-list">
+        <h3 class="main-footer__heading-secundary">Contact:</h3>
+        <ul class="main-footer__nav">
+          <li class="main-footer__item">
+            <a href="mailto: stefankostic88@yahoo.com">
+              <span>E-Mail:</span>
+              stefankostic88@yahoo.com</a
+            >
+          </li>
+          <li class="main-footer__item">
+            <a href="tel:+381643404465"><span>Phone:</span>+381643404465</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer__item-list">
+        <h3 class="main-footer__heading-secundary">Find me on:</h3>
+        <ul class="main-footer__nav" id="footer-icons">
+          <li class="main-footer__item">
+            <a
+              href="https://www.facebook.com/stefan.kostic.73113"
+              target="_blank"
+            >
+              <span>Facebook</span>
+              <svg class="game-info__official-container__official-webpage">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="main-footer__item">
+            <a href="" target="_blank">
+              <span>Instagram</span>
+              <svg class="game-info__official-container__official-webpage">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="main-footer__item">
+            <a href="" target="_blank">
+              <span>LinkedIn</span>
+              <svg class="game-info__official-container__official-webpage">
+                <use xlink:href="img/sprite.svg#icon-linkedin"></use></svg
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <div class="modal modal-hiden">
+      <div class="game-preview">
+        <div class="game-preview__main"></div>
+        <div class="game-preview__title-list"></div>
+      </div>
+    </div>
+    <div class="spinner-container">
+      <div class="spinner-ring">
+        <span class="spinner-text">loading...</span>
+      </div>
+    </div>
+  </body>
+</html>
